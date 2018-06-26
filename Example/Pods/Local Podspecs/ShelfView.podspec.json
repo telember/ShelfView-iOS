@@ -12,7 +12,7 @@
     "Adeyinka Adediji": "tdscientist@gmail.com"
   },
   "source": {
-    "git": "https://github.com/tdscientist/ShelfView-iOS.git",
+    "git": "https://github.com/telember/ShelfView-iOS.git",
     "tag": "1.0"
   },
   "social_media_url": "https://twitter.com/tdscientist",
@@ -28,7 +28,7 @@
   "frameworks": "UIKit",
   "dependencies": {
     "Kingfisher": [
-      "~> 3.0"
+      "~> 4.8.0"
     ]
   }
 }
