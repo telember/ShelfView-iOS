@@ -10,7 +10,7 @@ import Foundation
 
 class Dimens {
     static let gridItemWidth = 150
-    static let gridItemHeight = 200
+    static let gridItemHeight = 220
     static let bookWidth = Double(130)
     static let bookHeight = Double(160)
 }

@@ -6,14 +6,18 @@ PODS:
 DEPENDENCIES:
   - ShelfView (from `../`)
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
+
 EXTERNAL SOURCES:
   ShelfView:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
-  ShelfView: 7ec8cdc423a79d0a3e87f9035021e8d8bb727af1
+  ShelfView: b6c6930a86c47cccc212371e8b9ba98b68511b45
 
 PODFILE CHECKSUM: ad12021367c41c81b269af9c271c64edc2fa1c47
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.0

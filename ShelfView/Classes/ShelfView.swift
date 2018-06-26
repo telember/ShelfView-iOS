@@ -76,7 +76,7 @@ public class ShelfView: UIView,UICollectionViewDelegate, UICollectionViewDataSou
         shelfView.bounces = false
         addSubview(shelfView)
         
-        shelfView.backgroundColor = utils.hexStringToUIColor("#C49E7A")
+        shelfView.backgroundColor = UIColor(white: 1, alpha: 0.5)
         
         self.bookModel.removeAll()
         self.bookModel.append(contentsOf: bookModel)
@@ -226,13 +226,13 @@ public class ShelfView: UIView,UICollectionViewDelegate, UICollectionViewDataSou
         
         switch shelfItem.type {
         case ShelfView.START:
-            cell.shelfBackground.image = utils.loadImage(name: "left")
+            cell.shelfBackground.image = utils.loadImage(name: "l_shelf")
             break
         case ShelfView.END:
-            cell.shelfBackground.image = utils.loadImage(name: "right")
+            cell.shelfBackground.image = utils.loadImage(name: "r_shelf")
             break
         default:
-            cell.shelfBackground.image = utils.loadImage(name: "center")
+            cell.shelfBackground.image = utils.loadImage(name: "m_shelf")
             break
         }
         

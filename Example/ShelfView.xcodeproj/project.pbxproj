@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		07B70C121F76D613005B60F1 /* ShelfView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShelfView.framework; path = "../../../Library/Developer/Xcode/DerivedData/ShelfView-gntmofsaocpphqbzmctlugbygrql/Build/Products/Debug-iphonesimulator/ShelfView/ShelfView.framework"; sourceTree = "<group>"; };
 		0A9765D306CCF9D17F0910D6 /* Pods_ShelfView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShelfView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AF892A3F21A78EC3FF3348F /* ShelfView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ShelfView.podspec; path = ../ShelfView.podspec; sourceTree = "<group>"; };
+		0AF892A3F21A78EC3FF3348F /* ShelfView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ShelfView.podspec; path = ../ShelfView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1F8551EAF5915EA209231457 /* Pods_ShelfView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShelfView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB356FC702C44EE95B955EB /* Pods-ShelfView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfView_Example/Pods-ShelfView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		379FA4752B5FA86899D82853 /* Pods-ShelfView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfView_Tests/Pods-ShelfView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,7 +175,6 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				1B5D4CE16DA95C4DFFBF9325 /* [CP] Embed Pods Frameworks */,
-				25D26B9D2A2EC7EC2346BF61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,8 +193,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				8B998DC33F6D428811D860D5 /* [CP] Embed Pods Frameworks */,
-				7BC0E7D87787E231EA97A9E3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,13 +272,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShelfView_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1B5D4CE16DA95C4DFFBF9325 /* [CP] Embed Pods Frameworks */ = {
@@ -290,58 +290,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShelfView_Example/Pods-ShelfView_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/ShelfView/ShelfView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ShelfView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShelfView_Example/Pods-ShelfView_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		25D26B9D2A2EC7EC2346BF61 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShelfView_Example/Pods-ShelfView_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BC0E7D87787E231EA97A9E3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShelfView_Tests/Pods-ShelfView_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8B998DC33F6D428811D860D5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShelfView_Tests/Pods-ShelfView_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DC68CFF1C61B92A183797797 /* [CP] Check Pods Manifest.lock */ = {
@@ -350,13 +310,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShelfView_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
