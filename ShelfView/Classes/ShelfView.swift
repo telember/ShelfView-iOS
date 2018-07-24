@@ -76,7 +76,7 @@ public class ShelfView: UIView,UICollectionViewDelegate, UICollectionViewDataSou
         shelfView.bounces = false
         addSubview(shelfView)
         
-        shelfView.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        shelfView.backgroundColor = UIColor(white: 1, alpha: 0)
         
         self.bookModel.removeAll()
         self.bookModel.append(contentsOf: bookModel)
@@ -221,7 +221,7 @@ public class ShelfView: UIView,UICollectionViewDelegate, UICollectionViewDataSou
         let bookCover = shelfItem.bookCoverSource.trim()
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShelfCellView", for: indexPath) as! ShelfCellView
-        cell.shelfBackground.frame = CGRect(x: 0, y: 0, width: trueGridItemWidth, height: Double(gridItemHeight))
+        cell.shelfBackground.frame = CGRect(x: 0, y: 0, width: trueGridItemWidth + 0.5, height: Double(gridItemHeight))
         cell.shelfBackground.contentMode = .scaleToFill
         
         switch shelfItem.type {

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ShelfView'
-  s.version          = '1.1'
+  s.version          = '1.2'
   s.summary          = 'iOS custom view to display books on shelf.'
 
 # This description is used to generate tags and improve search results.

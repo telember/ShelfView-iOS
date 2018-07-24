@@ -216,7 +216,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = MDCJGSLNV9;
+						DevelopmentTeam = 8YC2SJ96QB;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -466,7 +466,7 @@
 			baseConfigurationReference = 9779085D8D49DB700C8D91F0 /* Pods-ShelfView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MDCJGSLNV9;
+				DEVELOPMENT_TEAM = 8YC2SJ96QB;
 				INFOPLIST_FILE = ShelfView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -482,7 +482,7 @@
 			baseConfigurationReference = 1FB356FC702C44EE95B955EB /* Pods-ShelfView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MDCJGSLNV9;
+				DEVELOPMENT_TEAM = 8YC2SJ96QB;
 				INFOPLIST_FILE = ShelfView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
